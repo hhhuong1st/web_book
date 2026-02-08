@@ -79,13 +79,16 @@ h5 {
 .section-title span {
     font-weight: bold;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    /* Tăng khoảng cách dưới chữ New */
     font-family: var(--font-body);
 }
 
 .section-title h2 {
     font-size: 3rem;
     text-transform: capitalize;
+    margin-bottom: 15px;
+    /* Thêm khoảng cách dưới tiêu đề chính */
 }
 
 .section-spacing {
@@ -580,7 +583,8 @@ h5 {
     background: var(--primary-red);
     color: white;
     border: 2px solid white;
-    padding: 10px 30px;
+    margin-top: 90px;
+    padding: 10px 50px;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 5px 5px 0 #fff;
@@ -649,11 +653,12 @@ h5 {
     color: white;
     /* Màu chữ trắng */
     padding: 50px 0;
+    padding-bottom: 90px;
     /* Khoảng cách trên dưới */
     position: relative;
     /* Để định vị tuyệt đối */
     margin-top: 120px;
-    margin-bottom: 120px;
+    margin-bottom: 200px;
     z-index: 1;
     /* Tạo stacking context */
 }
@@ -678,7 +683,7 @@ h5 {
 /* Vệt xước nằm trên cùng (đẩy lên cao hơn để không che nội dung) */
 .dark-series .scratch-top {
     position: absolute;
-    top: -200px;
+    top: -190px;
     left: 0;
     width: 100%;
     height: auto;
@@ -690,7 +695,7 @@ h5 {
 /* Vệt xước nằm dưới cùng (đẩy xuống thấp hơn để không che nội dung) */
 .dark-series .scratch-bottom {
     position: absolute;
-    bottom: -220px;
+    bottom: -170px;
     /* Đẩy xuống thấp hơn chút */
     left: 0;
     width: 100%;
@@ -702,7 +707,8 @@ h5 {
 
 .filter-buttons {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
+    /* Tăng khoảng cách so với tiêu đề */
 }
 
 .filter-buttons button {
@@ -751,7 +757,51 @@ h5 {
     align-items: center;
 }
 
+/* --- PHẦN TRANG TRÍ CHO SUPERHERO SERIES --- */
+
+/* Sticker WOW ở phía trên bên phải */
+.wow-sticker {
+    position: absolute;
+    top: -260px;
+    right: 120px;
+    width: 280px;
+    z-index: 10;
+    pointer-events: none;
+    transform: rotate(15deg);
+    filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.2));
+}
+
+/* Sticker cô gái tóc vàng ở phía dưới bên trái */
+.girl-sticker {
+    position: absolute;
+    bottom: -100px;
+    left: 90px;
+    width: 320px;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
+}
+
 /* --- TESTIMONIALS & CTA --- */
+.testimonials {
+    padding-left: 80px;
+    /* Tăng lề bên trái */
+    padding-right: 80px;
+    /* Tăng lề bên phải */
+}
+
+.testimonials .section-title {
+    margin-bottom: 60px;
+    /* Tăng khoảng cách dưới tiêu đề phần Testimonial */
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -761,21 +811,24 @@ h5 {
 
 .testi-item .bubble {
     background: white;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 20px;
     border: 2px solid #000;
     position: relative;
-    margin-bottom: 20px;
-    box-shadow: 5px 5px 0 #ddd;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 0 #000;
+    /* Đổ bóng đen đặc kiểu comic */
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .testi-item .bubble::after {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 30px;
-    width: 20px;
-    height: 20px;
+    bottom: -15px;
+    left: 40px;
+    width: 25px;
+    height: 25px;
     background: white;
     border-bottom: 2px solid #000;
     border-right: 2px solid #000;
@@ -789,78 +842,76 @@ h5 {
 }
 
 .user-info img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.user-info strong {
+    color: var(--primary-red);
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
 }
 
 .cta-banner {
-    background: var(--primary-red);
-    border: 3px solid #000;
-    padding: 40px;
-    border-radius: 20px;
+    background: url('../images/imgi_37_banner-bg.png') no-repeat center center;
+    background-size: 100% 100%;
+    /* Giữ nguyên ảnh, không bị cắt xén */
+    /* border: 3px solid #000; */
+    /* Bỏ viền đen theo yêu cầu */
+    padding: 60px;
+    /* Căn đều padding 4 phía để nội dung nằm giữa */
+    border-radius: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    overflow: hidden;
-    background-image: radial-gradient(circle, transparent 20%, #000 20%, #000 21%, transparent 21%, transparent);
-    background-size: 10px 10px;
+    /* overflow: hidden; */
+    /* Bỏ ẩn phần thừa để mascot lòi ra ngoài */
+    overflow: visible;
+    min-height: 400px;
 }
 
 .cta-content {
-    flex: 2;
+    flex: 1;
     z-index: 2;
     position: relative;
+    max-width: 500px;
+    /* Tăng chiều rộng tối đa */
+    margin: 0 auto;
+    text-align: center;
+    /* Căn giữa nội dung chữ */
 }
 
 .cta-content h2 {
     color: white;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 3px 3px 0 #000;
+    font-size: 2.2rem;
+    /* Giảm cỡ chữ tiêu đề nhỏ hơn */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    /* text-shadow: 4px 4px 0 #000; */
+    /* Bỏ bóng đổ */
+}
+
+/* Chỉnh lại margin cho nút Join trong banner */
+.cta-banner .btn-superhero {
+    margin-top: 20px;
 }
 
 .cta-img {
     position: absolute;
-    right: -50px;
-    bottom: -50px;
-    width: 400px;
-    transform: rotate(-10deg);
-    opacity: 0.9;
+    left: 10px;
+    /* Điều chỉnh vị trí sang phải một chút */
+    bottom: -10px;
+    height: 80%;
+    /* Thu nhỏ cậu bé lại để không quá to */
+    width: auto;
+    z-index: 10;
+    /* Đảm bảo nằm trên banner */
 }
 
-/* --- TEAM --- */
-.team-section {
-    background: var(--primary-red);
-    color: white;
-}
 
-.team-mem img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.white-line {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 40px 0;
-}
-
-.stats-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.stats-row h1 {
-    font-size: 4rem;
-    -webkit-text-stroke: 2px white;
-    color: transparent;
-}
 
 /* --- BLOG --- */
 .blog-list {
@@ -973,8 +1024,7 @@ h5 {
     .hero-grid,
     .features,
     .row-flex,
-    .grid-3,
-    .stats-row {
+    .grid-3 {
         grid-template-columns: 1fr;
         display: flex;
         flex-direction: column;
