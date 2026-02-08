@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comixs - The Best Online Comic Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root-header"></div>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="sub-title">Welcome to <span class="text-red">Comixs</span></span>
+                    <h1>The Best Online <span class="text-red">Comic Store</span></h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search keyword...">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/cacanhhung.png" alt="Heroes">
+                </div>
+            </div>
+            <img src="images/khoi.png" class="cloud-img" alt="Clouds">
+        </section>
+
+        <section class="features container">
+            <div class="feature-box">
+                <i class="fa-solid fa-book-open text-red"></i>
+                <div>
+                    <h3>Read Books Online</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-rotate-left text-red"></i>
+                <div>
+                    <h3>30 Days Return</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-truck-fast text-red"></i>
+                <div>
+                    <h3>Free Shipping</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-shield-halved text-red"></i>
+                <div>
+                    <h3>Secured Payment</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-books container section-spacing">
+            <div class="section-title text-center">
+                <span class="text-red">Comic</span>
+                <h2>Featured Books</h2>
+            </div>
+            <div class="grid-4 mt-30">
+                <!-- Card 1 -->
+                <div class="feat-card">
+                    <div class="feat-img">
+                        <img src="images/imgi_7_Ultimate-Spiderman-1.png" alt="Ultimate Spiderman">
+                    </div>
+                    <div class="feat-body">
+                        <h3 class="text-red">ULTIMATE SPIDERMAN</h3>
+                        <div class="feat-meta">
+                            <span><i class="fa-regular fa-eye"></i> 5 Reviews</span>
+                            <a href="#" class="btn-arrow active"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="feat-card">
+                    <div class="feat-img">
+                        <img src="images/imgi_8_NOVA-NEXUS.png" alt="NOVA NEXUS">
+                    </div>
+                    <div class="feat-body">
+                        <h3>NOVA NEXUS</h3>
+                        <div class="feat-meta">
+                            <span><i class="fa-regular fa-eye"></i> 5 Reviews</span>
+                            <a href="#" class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="feat-card">
+                    <div class="feat-img">
+                        <img src="images/imgi_9_RED-SQUAD-IV.png" alt="RED SQUAD IV">
+                    </div>
+                    <div class="feat-body">
+                        <h3>RED SQUAD IV</h3>
+                        <div class="feat-meta">
+                            <span><i class="fa-regular fa-eye"></i> 5 Reviews</span>
+                            <a href="#" class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="feat-card">
+                    <div class="feat-img">
+                        <img src="images/imgi_10_SUPER-KNIGHT.png" alt="SUPER KNIGHT">
+                    </div>
+                    <div class="feat-body">
+                        <h3>SUPER KNIGHT</h3>
+                        <div class="feat-meta">
+                            <span><i class="fa-regular fa-eye"></i> 5 Reviews</span>
+                            <a href="#" class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop By Category Section -->
+        <section class="category-section">
+            <img src="images/imgi_1_vector-image.png" class="scratch-top" alt="border">
+            <div class="bang-sticker">
+                <img src="images/imgi_19_image.png" alt="BANG!">
+            </div>
+
+            <div class="container text-center relative z-10">
+                <div class="section-title text-white mb-40">
+                    <span class="text-white small-title">Shop By</span>
+                    <h2 class="big-title">Category</h2>
+                </div>
+
+                <div class="cat-grid">
+                    <!-- Manga -->
+                    <div class="cat-card">
+                        <img src="images/imgi_15_Anime0.png" alt="Manga">
+                        <div class="cat-overlay">
+                            <h3>Manga</h3>
+                        </div>
+                    </div>
+                    <!-- Love -->
+                    <div class="cat-card">
+                        <img src="images/imgi_12_Love1.png" alt="Love">
+                        <div class="cat-overlay">
+                            <h3>Love</h3>
+                        </div>
+                    </div>
+                    <!-- Comic -->
+                    <div class="cat-card">
+                        <img src="images/imgi_13_Comic3.png" alt="Comic">
+                        <div class="cat-overlay">
+                            <h3>Comic</h3>
+                        </div>
+                    </div>
+                    <!-- Arrivals -->
+                    <div class="cat-card">
+                        <img src="images/imgi_14_Arrivals4.png" alt="Arrivals">
+                        <div class="cat-overlay">
+                            <h3>Arrivals</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/imgi_2_vector-image.png" class="scratch-bottom" alt="border">
+        </section>
+
+        <section class="arrivals container section-spacing">
+            <div class="section-title text-center mb-40">
+                <span class="text-red small-title"
+                    style="font-family: var(--font-heading); font-size: 1.5rem;">New</span>
+                <h2 class="big-title" style="font-size: 3.5rem; color: #000;">Arrivals</h2>
+            </div>
+
+            <div class="arrivals-grid">
+                <!-- Left: Large Image -->
+                <div class="arrival-left-img">
+                    <img src="images/imgi_20_arrival-img.png" alt="New Arrival Girl">
+                </div>
+
+                <!-- Right: Product Grid -->
+                <div class="arrival-products">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="prod-img">
+                            <img src="images/imgi_21_The-Villain-4.png" alt="The Villain 4">
+                        </div>
+                        <div class="prod-info">
+                            <h3>The Villain 4</h3>
+                            <div class="price-row">
+                                <span class="price-red">$30.50 <del>$31.50</del></span>
+                                <button class="btn-add-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="prod-img">
+                            <img src="images/imgi_22_The-Villain-3.png" alt="The Villain 3">
+                        </div>
+                        <div class="prod-info">
+                            <h3>The Villain 3</h3>
+                            <div class="price-row">
+                                <span class="price-red">$30.50 <del>$31.50</del></span>
+                                <button class="btn-add-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="prod-img">
+                            <img src="images/imgi_23_The-Villain-2.png" alt="The Villain 2">
+                        </div>
+                        <div class="prod-info">
+                            <h3>The Villain 2</h3>
+                            <div class="price-row">
+                                <span class="price-red">$30.50 <del>$31.50</del></span>
+                                <button class="btn-add-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="prod-img">
+                            <img src="images/imgi_24_The-Villain-1.png" alt="The Villain 1">
+                        </div>
+                        <div class="prod-info">
+                            <h3>The Villain 1</h3>
+                            <div class="price-row">
+                                <span class="price-red">$30.50 <del>$31.50</del></span>
+                                <button class="btn-add-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-40">
+                <button class="btn-yellow-outline">View All Products</button>
+            </div>
+        </section>
+
+        <section class="dark-series section-spacing">
+            <img src="images/imgi_4_vector-image.png" class="scratch-top" alt="border">
+            <div class="container relative z-10">
+                <div class="section-title text-center text-white">
+                    <span>New</span>
+                    <h2>Superhero Series</h2>
+                </div>
+                <div class="filter-buttons">
+                    <button class="active">Upcoming</button>
+                    <button>Weekly Best</button>
+                    <button>Most Popular</button>
+                </div>
+                <div class="grid-4 mt-30">
+                    <div class="dark-card">
+                        <img src="images/imgi_76_Batman-Wayne-240x300.png" alt="Batman">
+                        <div class="card-body">
+                            <h4>Batman Wayne</h4>
+                            <span>$30.50</span>
+                        </div>
+                    </div>
+                    <div class="dark-card">
+                        <img src="images/imgi_77_Figures-Statues-240x300.png" alt="Goku">
+                        <div class="card-body">
+                            <h4>Figures Statues</h4>
+                            <span>$30.50</span>
+                        </div>
+                    </div>
+                    <div class="dark-card">
+                        <img src="images/imgi_78_Dragon-Ball-Z-240x300.png" alt="Hulk">
+                        <div class="card-body">
+                            <h4>Dragon Ball Z</h4>
+                            <span>$30.50</span>
+                        </div>
+                    </div>
+                    <div class="dark-card">
+                        <img src="images/imgi_79_Ultimate-Spiderman-240x300.png" alt="Spiderman">
+                        <div class="card-body">
+                            <h4>Ultimate Spider</h4>
+                            <span>$30.50</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-30">
+                    <button class="btn-superhero">See More Hero</button>
+                </div>
+            </div>
+            <img src="images/imgi_3_vector-image.png" class="scratch-bottom" alt="border">
+        </section>
+
+        <section class="testimonials container section-spacing">
+            <div class="section-title text-center">
+                <span class="text-red">Testimonial</span>
+                <h2>Few Word Form Our Community</h2>
+            </div>
+            <div class="grid-3">
+                <div class="testi-item">
+                    <div class="bubble">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div class="user-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        <div><strong>Leslie Alexander</strong><br><small>Director, NBC</small></div>
+                    </div>
+                </div>
+                <div class="testi-item">
+                    <div class="bubble">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div class="user-info">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User">
+                        <div><strong>Jacob Jones</strong><br><small>Director, NBC</small></div>
+                    </div>
+                </div>
+                <div class="testi-item">
+                    <div class="bubble">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                    <div class="user-info">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                        <div><strong>Bernard</strong><br><small>Director, NBC</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-banner">
+                <div class="cta-content text-center">
+                    <h2>Want to readers and listeners see Your digital comics? Join this team!</h2>
+                    <p class="text-white">We Strongly Believe That our team support & Drive You.</p>
+                    <button class="btn-black">Join Now</button>
+                </div>
+                <img src="https://img.freepik.com/free-vector/hand-drawn-nerd-logo-template_23-2149199407.jpg?w=740"
+                    class="cta-img" alt="Mascot">
+            </div>
+        </section>
+
+        <section class="team-section jagged-top jagged-bottom">
+            <div class="container text-center">
+                <div class="section-title text-white">
+                    <span>Our Team</span>
+                    <h2>Meet With Our Comic Artist</h2>
+                </div>
+                <div class="grid-4 mt-30">
+                    <div class="team-mem"><img src="https://randomuser.me/api/portraits/men/10.jpg">
+                        <h5>Leslie Alexander</h5><span>Artist</span>
+                    </div>
+                    <div class="team-mem"><img src="https://randomuser.me/api/portraits/women/10.jpg">
+                        <h5>Jane Cooper</h5><span>Artist</span>
+                    </div>
+                    <div class="team-mem"><img src="https://randomuser.me/api/portraits/men/12.jpg">
+                        <h5>Guy Hawkins</h5><span>Artist</span>
+                    </div>
+                    <div class="team-mem"><img src="https://randomuser.me/api/portraits/women/12.jpg">
+                        <h5>Eleanor Pena</h5><span>Artist</span>
+                    </div>
+                </div>
+                <hr class="white-line">
+                <div class="stats-row">
+                    <div>
+                        <h1>60%</h1>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                    <div>
+                        <h1>11M</h1>
+                        <p>Users Registration</p>
+                    </div>
+                    <div class="text-left">
+                        <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blogs container section-spacing">
+            <div class="section-title">
+                <span class="text-red">Blogs</span>
+                <h2>Our Top Trendy Comic News</h2>
+                <hr>
+            </div>
+            <div class="blog-list">
+                <div class="blog-item">
+                    <span class="blog-num">01</span>
+                    <img src="https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=500" alt="Blog 1">
+                    <div class="blog-info">
+                        <small>💬 Comments | 🔗 0 Share</small>
+                        <h4>How Comics Create Immersive Great Narratives 3</h4>
+                        <a href="#" class="read-more">↗</a>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <span class="blog-num">02</span>
+                    <img src="https://images.unsplash.com/photo-1535970793482-07de93762dc4?w=500" alt="Blog 2">
+                    <div class="blog-info">
+                        <small>💬 Comments | 🔗 0 Share</small>
+                        <h4>How Comics Create Immersive Great Narratives 2</h4>
+                        <a href="#" class="read-more">↗</a>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <span class="blog-num">03</span>
+                    <img src="https://images.unsplash.com/photo-1560579183-bc97db5528a4?w=500" alt="Blog 3">
+                    <div class="blog-info">
+                        <small>💬 Comments | 🔗 0 Share</small>
+                        <h4>How Comics Create Immersive Great Narratives 1</h4>
+                        <a href="#" class="read-more">↗</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-30"><button class="btn-primary">Browse More</button></div>
+        </section>
+
+        <section class="newsletter jagged-top">
+            <div class="container text-center">
+                <h2 class="text-yellow">Get your Need on By Subscribing our Newsletter</h2>
+                <button class="btn-red">See All Post</button>
+                <div class="hero-group">
+                    <img src="https://wallpapers.com/images/hd/justice-league-comic-characters-5d69101d.png"
+                        alt="Justice League">
+                </div>
+                <div class="pow-badge">POW!</div>
+            </div>
+        </section>
+
+        <section class="brands container section-spacing text-center">
+            <h2 class="mb-20">Our Brands</h2>
+            <div class="grid-4">
+                <div class="brand-box bg-blue-light"><i class="fa-solid fa-book-open"></i> MAGICBOOK</div>
+                <div class="brand-box bg-blue-dark"><i class="fa-solid fa-feather"></i> RIMBERIO</div>
+                <div class="brand-box bg-gray"><i class="fa-solid fa-book"></i> BOOK STORY</div>
+                <div class="brand-box bg-light"><i class="fa-solid fa-pen-nib"></i> Studio Publisher</div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="root-footer"></div>
+
+    <script type="text/babel" src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
