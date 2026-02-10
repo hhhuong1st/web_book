@@ -57,17 +57,65 @@ const Header = () => {
 };
 
 // --- FOOTER COMPONENT ---
+// --- FOOTER COMPONENT ---
+// --- FOOTER COMPONENT ---
 const Footer = () => {
     return (
         <footer className="site-footer">
-            <div className="container">
-                <h2 style={{ fontFamily: 'Bangers', fontSize: '2rem', marginBottom: '20px' }}>COMIXS STORE</h2>
-                <div className="socials">
-                    <i className="fa-brands fa-facebook"></i>
-                    <i className="fa-brands fa-twitter"></i>
-                    <i className="fa-brands fa-instagram"></i>
+            <div className="footer-wave"></div>
+
+            {/* Character Image - Moved outside container for better positioning */}
+            <div className="footer-character">
+                <img src="images/imgi_65_footer-left-img.png" alt="Demon Character" />
+            </div>
+
+            <div className="container relative text-center" style={{ position: 'relative', zIndex: '10' }}>
+
+                {/* Top Section: Logo, Button, Socials */}
+                <div className="footer-top">
+                    <div className="footer-logo">Comixs.</div>
+                    <button className="btn-buy-now">Buy Now</button>
+                    <div className="footer-socials">
+                        <i className="fa-brands fa-facebook-f"></i>
+                        <i className="fa-brands fa-twitter"></i>
+                        <i className="fa-brands fa-linkedin-in"></i>
+                        <i className="fa-brands fa-instagram"></i>
+                    </div>
                 </div>
-                <p style={{ marginTop: '20px', opacity: 0.8 }}>&copy; 2024 Comixs. All rights reserved.</p>
+
+                <hr className="footer-divider" />
+
+                {/* Middle Section: Contact Info */}
+                <div className="footer-info">
+                    <div className="info-item">
+                        <i className="fa-regular fa-envelope text-yellow"></i>
+                        <div className="text-left">
+                            <span className="info-label text-yellow">Email Id</span>
+                            <span className="info-val">exmaple@gmail.com</span>
+                        </div>
+                    </div>
+                    <div className="info-item">
+                        <i className="fa-solid fa-phone text-yellow"></i>
+                        <div className="text-left">
+                            <span className="info-label text-yellow">Phone</span>
+                            <span className="info-val">(+33)7 35 55 31 15</span>
+                        </div>
+                    </div>
+                    <div className="info-item">
+                        <i className="fa-solid fa-location-dot text-yellow"></i>
+                        <div className="text-left">
+                            <span className="info-label text-yellow">Address</span>
+                            <span className="info-val">(6391 Elgin St. Celina, Delaware 10299</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom Section: Copyright - Moved outside container */}
+            <div className="footer-copyright">
+                <div className="container">
+                    Copyright © 2024 <span className="text-yellow">Comic Book Store Theme</span>. All Rights Reserved.
+                </div>
             </div>
         </footer>
     );
