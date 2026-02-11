@@ -1495,68 +1495,68 @@ h5 {
     /* Ensure no transition interferes */
 }
 
+
 /* --- FOOTER REDESIGN --- */
 .site-footer {
     background-color: #111;
     color: white;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 20px;
     position: relative;
-    margin-top: 150px;
-    /* Space for the character/wave */
-}
-
-/* Yellow Wave Effect at Top */
-.footer-wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #111;
-    clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 100%, 0 0);
-    /* Simple zig-zag/wave placeholder, or use SVG */
-    /* Better wave using radial gradient or SVG would be ideal.
-       For now, let's use a curved border radius approach for a simple "hill" effect */
-    background: transparent;
-}
-
-.site-footer::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: #111;
-    border-top-left-radius: 50% 100%;
-    border-top-right-radius: 50% 100%;
+    margin-top: 200px;
     z-index: 1;
 }
 
-/* Yellow background behind the wave (emulated on body or section above) 
-   Actually, the reference shows yellow *hills* behind. 
-   Let's add a yellow pseudo element behind the black one */
-.site-footer::after {
-    content: "";
+/* SVG Wave Container */
+.footer-wave-svg {
     position: absolute;
-    top: -120px;
+    top: -190px;
+    /* Moved higher */
     left: 0;
     width: 100%;
-    height: 120px;
-    background: var(--accent-yellow);
-    border-top-left-radius: 40% 100%;
-    border-top-right-radius: 60% 100%;
+    line-height: 0;
     z-index: 0;
+    pointer-events: none;
+}
+
+.footer-wave-svg svg {
+    display: block;
+    width: 100%;
+    height: 200px;
+    /* Fixed height for stability */
+    min-height: 150px;
+}
+
+/* ... existing code ... */
+
+/* Đây là vị trí của nhân vật Ác Ma */
+/* Đây là vị trí của nhân vật Ác Ma */
+.footer-character {
+    position: absolute;
+    bottom: 50px;
+    /* Đẩy lên trên khung Copyright */
+    left: 2%;
+    z-index: 30;
+    width: 200px !important;
+    /* Giữ nguyên kích thước 200px */
+    pointer-events: none;
+}
+
+.footer-character img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     position: relative;
     z-index: 10;
+    padding: 0 150px;
+    /* Tăng khoảng cách lề để nội dung bo vào giữa hơn */
 }
 
 .footer-logo {
@@ -1567,13 +1567,32 @@ h5 {
     letter-spacing: 1px;
 }
 
+.btn-buy-now-footer {
+    background: var(--accent-yellow);
+    color: #000;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    transition: 0.2s;
+    box-shadow: 0 5px 15px rgba(250, 204, 21, 0.2);
+}
+
+.btn-buy-now-footer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4);
+}
+
 .footer-socials {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .footer-socials i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     cursor: pointer;
     transition: 0.3s;
@@ -1581,28 +1600,156 @@ h5 {
 
 .footer-socials i:hover {
     color: var(--accent-yellow);
+    transform: scale(1.2);
 }
 
 .footer-divider {
     border: none;
-    border-top: 1px solid #333;
-    margin: 0 0 40px;
-}
-
-.footer-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 60px;
+    border-top: 1px solid #fff;
+    /* Chuyển thành màu trắng */
+    margin: 50px 150px 50px 150px;
+    /* Margin trái 150px để đều với chữ Comixs, tăng margin top để xa chữ hơn */
     position: relative;
     z-index: 10;
 }
 
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 10;
+    padding: 0 150px;
+    /* Tăng khoảng cách lề để nội dung bo vào giữa hơn */
+    /* Removed padding-left to center content */
+}
+
+/* Align columns to match top row (Left - Center - Right) */
+.footer-info .info-item:nth-child(1) {
+    justify-self: start;
+}
+
+.footer-info .info-item:nth-child(2) {
+    justify-self: center;
+}
+
+.footer-info .info-item:nth-child(3) {
+    justify-self: end;
+}
+
 .info-item {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    text-align: left;
+    align-items: center;
+    /* Centered vertically */
+    gap: 10px;
+    /* Reduced gap */
 }
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-yellow);
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.info-item:hover .info-icon {
+    background: var(--accent-yellow);
+    color: #000;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    color: var(--accent-yellow);
+    font-size: 14px !important;
+    /* Explicit 14px */
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.info-val {
+    color: #fff;
+    font-size: 14px !important;
+    /* Explicit 14px */
+    line-height: 1.5;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #222;
+    /* Subtle separation */
+    padding-top: 30px;
+    font-size: 0.9rem;
+    color: #888;
+    position: relative;
+    z-index: 10;
+}
+
+.btn-back-to-top {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-yellow);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-back-to-top:hover {
+    background: #fff;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 991px) {
+    .footer-info {
+        padding-left: 0;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-character {
+        position: relative;
+        width: 150px;
+        margin: -80px auto 20px;
+        /* Pull up to overlap SVG */
+        bottom: auto;
+        left: auto;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-wave-svg {
+        top: -80px;
+        /* Adjust for mobile */
+    }
+
+    .site-footer {
+        padding-top: 0;
+    }
+}
+
+
 
 .info-item i {
     font-size: 1.5rem;
