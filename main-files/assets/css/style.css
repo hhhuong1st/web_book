@@ -1,4 +1,4 @@
-/* --- VARIABLES & RESET --- */
+/* --- BIẾN & THIẾT LẬP LẠI (VARIABLES & RESET) --- */
 :root {
     --primary-red: #D9001B;
     --accent-yellow: #FACC15;
@@ -66,7 +66,7 @@ img {
     margin-bottom: 20px;
 }
 
-/* --- TYPOGRAPHY --- */
+/* --- KIỂU CHỮ (TYPOGRAPHY) --- */
 h1,
 h2,
 h3,
@@ -102,7 +102,7 @@ h5 {
     padding: 80px 0;
 }
 
-/* --- BUTTONS --- */
+/* --- NÚT BẤM (BUTTONS) --- */
 .btn-primary {
     background: var(--accent-yellow);
     color: #000;
@@ -145,18 +145,18 @@ h5 {
     cursor: pointer;
 }
 
-/* --- HERO SECTION --- */
+/* --- PHẦN HERO (HERO SECTION) --- */
 .hero-section {
     padding: 120px 0 150px;
-    /* More bottom padding */
+    /* Thêm khoảng cách đệm phía dưới */
     position: relative;
     background-color: var(--bg-cream);
-    /* overflow: hidden; Removed to allow smoke to extend down */
+    /* overflow: hidden; Đã loại bỏ để cho phép khói lan xuống dưới */
     min-height: 900px;
-    /* Increase height as requested */
+    /* Tăng chiều cao theo yêu cầu */
     display: flex;
     align-items: center;
-    /* Center content vertically if needed */
+    /* Căn giữa nội dung theo chiều dọc nếu cần */
 }
 
 .hero-grid {
@@ -168,7 +168,7 @@ h5 {
 
 .sub-title {
     font-size: 1.3em;
-    /* Reduced from 2.5rem */
+    /* Giảm từ 2.5rem */
     font-weight: 600;
     color: var(--text-color);
     display: block;
@@ -177,7 +177,7 @@ h5 {
 
 .hero-content h1 {
     font-size: 4.5rem;
-    /* Reduced from 6rem to fit on one line */
+    /* Giảm từ 6rem để vừa trên một dòng */
     line-height: 1;
     margin: 10px 0 20px;
     font-weight: 700;
@@ -185,7 +185,7 @@ h5 {
 
 .hero-content h1 span {
     display: block;
-    /* Force Comic Store to new line */
+    /* Buộc Comic Store xuống dòng mới */
     color: var(--primary-red);
 }
 
@@ -217,8 +217,8 @@ h5 {
     cursor: pointer;
 }
 
-/* Cloud Image Styling */
-/* Cloud Image Styling */
+/* Định dạng hình ảnh đám mây */
+/* Định dạng hình ảnh đám mây */
 .cloud-img {
     position: absolute;
     bottom: -200px;
@@ -227,44 +227,44 @@ h5 {
     min-height: 300px;
     object-fit: cover;
     z-index: 10;
-    /* Above background */
+    /* Nằm trên nền */
     pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 20;
-    /* Above clouds */
+    /* Nằm trên đám mây */
 }
 
-/* Adjust hero image to sit behind clouds properly */
+/* Điều chỉnh hình ảnh hero để nằm phía sau đám mây một cách hợp lý */
 .hero-image {
     position: relative;
     z-index: 15;
-    /* Above clouds? Or below? User said smoke covers them. 
-                   If smoke covers, hero should be z-index < smoke. 
-                   User said "thấy tiêu đề và các anh hùng ở trên" -> see title and heroes ON TOP.
-                   So Heroes > Smoke. */
+    /* Nằm trên đám mây? Hay dưới? Người dùng nói khói che chúng. 
+                   Nếu khói che, hero phải có z-index < smoke. 
+                   Người dùng nói "thấy tiêu đề và các anh hùng ở trên" -> thấy tiêu đề và anh hùng Ở TRÊN CÙNG.
+                   Vì vậy Anh hùng > Khói. */
     margin-bottom: -50px;
 }
 
 .hero-image img {
     max-height: 850px;
-    /* Larger images */
+    /* Hình ảnh lớn hơn */
     width: auto;
     margin: 0 auto;
 }
 
 
 
-/* --- FEATURES --- */
+/* --- TÍNH NĂNG (FEATURES) --- */
 .features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     position: relative;
     z-index: 30;
-    /* Highest */
+    /* Cao nhất */
     margin-top: -100px;
 }
 
@@ -283,11 +283,11 @@ h5 {
 
 .feature-box i {
     font-size: 2.5rem;
-    /* Slightly larger */
+    /* Lớn hơn một chút */
     margin-bottom: 0;
-    /* Remove bottom margin */
+    /* Loại bỏ khoảng cách dưới */
     flex-shrink: 0;
-    /* Prevent shrinking */
+    /* Ngăn bị co lại */
 }
 
 .feature-box h3 {
@@ -306,9 +306,9 @@ h5 {
 .feature-box:hover {
     transform: translateY(-5px);
     background: white;
-    /* Keep white */
+    /* Giữ màu trắng */
     box-shadow: 5px 5px 0px var(--accent-yellow);
-    /* Yellow shadow */
+    /* Đổ bóng vàng */
 }
 
 /* --- JAGGED BORDER EFFECT (Hiệu ứng viền rách truyện tranh) --- */
@@ -326,19 +326,19 @@ h5 {
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Force 4 columns on desktop */
+    /* Buộc 4 cột trên máy tính để bàn */
     gap: 20px;
     width: 100%;
 }
 
-/* --- CATEGORIES --- */
-/* --- FEATURED BOOKS (New Categories) --- */
+/* --- DANH MỤC (CATEGORIES) --- */
+/* --- SÁCH NỔI BẬT (FEATURED BOOKS) (Danh mục mới) --- */
 .featured-books {
     position: relative;
     z-index: 50;
-    /* Ensure it's above hero/smoke */
+    /* Đảm bảo nó nằm trên hero/khói */
     background: transparent;
-    /* Clean bg */
+    /* Nền sạch sẽ */
     margin-top: 150px;
 }
 
@@ -360,7 +360,7 @@ h5 {
 
 .feat-img {
     height: 280px;
-    /* Taller images to clearly see cover */
+    /* Ảnh cao hơn để thấy rõ bìa */
     overflow: hidden;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -372,10 +372,10 @@ h5 {
 
 .feat-img img {
     width: 100%;
-    /* Ensure full width */
+    /* Đảm bảo chiều rộng đầy đủ */
     height: 100%;
     object-fit: contain;
-    /* Maintain aspect ratio */
+    /* Duy trì tỷ lệ khung hình */
     transition: 0.5s;
 }
 
@@ -396,6 +396,65 @@ h5 {
     color: var(--primary-red);
 }
 
+.feat-price {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-price {
+    color: var(--primary-red);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.old-price {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.feat-btns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-add-cart-small,
+.btn-buy-now-small {
+    flex: 1;
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+}
+
+.btn-add-cart-small {
+    background: transparent;
+    border: 2px solid var(--primary-red);
+    color: var(--primary-red);
+}
+
+.btn-add-cart-small:hover {
+    background: var(--primary-red);
+    color: white;
+}
+
+.btn-buy-now-small {
+    background: var(--primary-red);
+    border: 2px solid var(--primary-red);
+    color: white;
+}
+
+.btn-buy-now-small:hover {
+    background: #b00015;
+    border-color: #b00015;
+}
+
 .feat-meta {
     display: flex;
     justify-content: space-between;
@@ -404,7 +463,7 @@ h5 {
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: auto;
-    /* Push to bottom */
+    /* Đẩy xuống dưới cùng */
 }
 
 .btn-arrow {
@@ -419,8 +478,7 @@ h5 {
     transition: 0.2s;
 }
 
-.btn-arrow:hover,
-.btn-arrow.active {
+.btn-arrow:hover {
     background: var(--primary-red);
     color: white;
 }
@@ -479,8 +537,8 @@ h5 {
     color: white;
 }
 
-/* --- ARRIVALS --- */
-/* --- ARRIVALS REDESIGN --- */
+/* --- SẢN PHẨM MỚI (ARRIVALS) --- */
+/* --- THIẾT KẾ LẠI PHẦN SẢN PHẨM MỚI (ARRIVALS REDESIGN) --- */
 .arrivals-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -497,7 +555,7 @@ h5 {
 
 .arrival-products .product-card:nth-child(even) {
     transform: translateY(40px);
-    /* Stagger effect */
+    /* Hiệu ứng so le */
 }
 
 .arrival-products {
@@ -505,18 +563,18 @@ h5 {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 40px;
-    /* Extra space for staggered items */
+    /* Thêm khoảng trống cho các mục so le */
 }
 
 .arrival-products .product-card {
     background: white;
     border: 2px solid transparent;
-    /* Prepare for hover border */
+    /* Chuẩn bị cho viền khi di chuột qua */
     border-radius: 15px;
-    /* More rounded */
+    /* Bo tròn hơn */
     padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    /* Soft shadow like reference */
+    /* Đổ bóng nhẹ như bản mẫu */
     transition: 0.3s;
     text-align: left;
 }
@@ -524,12 +582,12 @@ h5 {
 .arrival-products .product-card:hover {
     border-color: var(--accent-yellow);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    /* Keep shadow consistent or slightly darker */
+    /* Giữ bóng nhất quán hoặc tối hơn một chút */
 }
 
 .arrival-products .prod-img img {
     border-radius: 10px;
-    /* Rounded image */
+    /* Ảnh bo góc */
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -595,22 +653,22 @@ h5 {
     font-weight: 700;
     cursor: pointer;
     box-shadow: 5px 5px 0 #fff;
-    /* White shadow */
+    /* Đổ bóng trắng */
     transition: 0.2s;
     text-transform: uppercase;
     font-family: var(--font-heading);
     letter-spacing: 0.5px;
     border-radius: 5px;
-    /* Soften corners */
+    /* Làm mềm các góc */
 }
 
 .btn-superhero:hover {
     transform: translateY(-2px);
     background: #000;
-    /* Black frame */
+    /* Khung đen */
     color: #fff;
     box-shadow: 5px 5px 0 var(--accent-yellow);
-    /* Yellow shadow */
+    /* Đổ bóng vàng */
     border-color: #000;
 }
 
@@ -621,7 +679,7 @@ h5 {
 
     .arrival-left-img {
         display: none;
-        /* Hide layout image on mobile for simplicity or stack? */
+        /* Ẩn hình ảnh bố cục trên di động để đơn giản hóa hoặc xếp chồng? */
     }
 }
 
@@ -655,7 +713,7 @@ h5 {
     cursor: pointer;
 }
 
-/* --- DARK SERIES --- */
+/* --- DÒNG TRUYỆN TỐI (DARK SERIES) --- */
 .dark-series {
     color: white;
     /* Màu chữ trắng */
@@ -741,7 +799,7 @@ h5 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
     color: black;
-    /* Ensure text is black on white bg */
+    /* Đảm bảo văn bản màu đen trên nền trắng */
 }
 
 .dark-card:hover {
@@ -759,7 +817,7 @@ h5 {
     object-fit: cover;
     width: 100%;
     border-radius: 10px;
-    /* Slight radius for image inside card */
+    /* Bo góc nhẹ cho hình ảnh bên trong thẻ */
 }
 
 .card-body {
@@ -794,7 +852,7 @@ h5 {
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
 }
 
-/* --- TESTIMONIALS & CTA --- */
+/* --- ĐÁNH GIÁ & CTA (TESTIMONIALS & CTA) --- */
 .testimonials {
     padding-left: 80px;
     /* Tăng lề bên trái */
@@ -1056,7 +1114,7 @@ h5 {
     transform: rotate(-45deg);
 }
 
-/* Responsive cho Blog */
+/* Phản hồi cho Blog (Responsive) */
 @media (max-width: 991px) {
     .blog-item {
         flex-direction: column;
@@ -1083,12 +1141,12 @@ h5 {
     }
 }
 
-/* --- NEWSLETTER --- */
+/* --- BẢN TIN (NEWSLETTER) --- */
 .newsletter {
-    /* bg moved to ::before */
+    /* nền được chuyển sang ::before */
     padding: 60px 0 0;
     position: relative;
-    /* overflow: hidden; Removed for scratch effect */
+    /* overflow: hidden; Đã loại bỏ cho hiệu ứng xước */
 }
 
 .hero-group img {
@@ -1112,14 +1170,14 @@ h5 {
     transform: rotate(15deg);
 }
 
-/* --- BRANDS --- */
+/* --- THƯƠNG HIỆU (BRANDS) --- */
 .brand-box {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
     background: white;
-    /* Ensure a background if image has transparency */
+    /* Đảm bảo có nền nếu hình ảnh có độ trong suốt */
 }
 
 .brand-box:hover {
@@ -1134,7 +1192,7 @@ h5 {
     border-radius: 15px;
 }
 
-/* --- RESPONSIVE --- */
+/* --- PHẢN HỒI (RESPONSIVE) --- */
 @media (max-width: 768px) {
 
     .hero-grid,
@@ -1148,7 +1206,7 @@ h5 {
 
     .grid-4 {
         grid-template-columns: 1fr;
-        /* 1 column on mobile */
+        /* 1 cột trên di động */
     }
 
     .hero-content h1 {
@@ -1168,7 +1226,7 @@ h5 {
     }
 }
 
-/* --- CATEGORY SECTION --- */
+/* --- PHẦN DANH MỤC (CATEGORY SECTION) --- */
 /* --- PHẦN DANH MỤC --- */
 .category-section {
     /* Đã bỏ background-color ở đây để dùng ::before */
@@ -1270,7 +1328,7 @@ h5 {
     border-radius: 15px;
     overflow: hidden;
     height: 200px;
-    /* Specific height */
+    /* Chiều cao cụ thể */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     cursor: pointer;
@@ -1310,11 +1368,11 @@ h5 {
 @media (max-width: 768px) {
     .cat-grid {
         grid-template-columns: 1fr;
-        /* Stack on mobile */
+        /* Xếp chồng trên di động */
     }
 }
 
-/* --- HEADER & BANNER REDESIGN --- */
+/* --- THIẾT KẾ LẠI ĐẦU TRANG & BANNER (HEADER & BANNER REDESIGN) --- */
 .top-banner {
     background-color: #5352ed;
     color: white;
@@ -1354,7 +1412,7 @@ h5 {
     background: #f0f0f0;
 }
 
-/* Header & Footer Styling (React) */
+/* Định dạng Đầu trang & Chân trang (React) */
 .site-header {
     background-color: var(--bg-cream);
     padding: 15px 0;
@@ -1370,7 +1428,7 @@ h5 {
     align-items: center;
 }
 
-/* Center Pill Navigation */
+/* Điều hướng dạng viên thuốc ở giữa */
 .nav-center {
     background: white;
     padding: 5px 5px 5px 30px;
@@ -1391,12 +1449,12 @@ h5 {
 
 .nav-menu a {
     font-family: var(--font-heading);
-    /* Changed to Acme */
+    /* Đổi thành Acme */
     font-weight: 400;
-    /* Acme is naturally bold */
+    /* Acme tự nhiên đã đậm */
     color: #000;
     font-size: 1.2rem;
-    /* Increased size */
+    /* Tăng kích thước */
     display: flex;
     align-items: center;
     gap: 5px;
@@ -1421,7 +1479,7 @@ h5 {
     border: none;
     cursor: pointer;
     font-family: var(--font-heading);
-    /* Changed to Acme */
+    /* Đổi thành Acme */
     font-size: 1.1rem;
     transition: 0.2s;
     letter-spacing: 0.5px;
@@ -1444,9 +1502,9 @@ h5 {
     font-weight: 400;
     cursor: pointer;
     font-size: 1.2rem;
-    /* Match Signup size */
+    /* Khớp với kích thước Đăng ký */
     font-family: var(--font-heading);
-    /* Changed to Acme */
+    /* Đổi thành Acme */
     letter-spacing: 0.5px;
 }
 
@@ -1456,13 +1514,13 @@ h5 {
     padding: 8px 25px;
     border: none;
     border-radius: 25px;
-    /* More rounded */
+    /* Bo tròn hơn */
     cursor: pointer;
     font-weight: 400;
     font-size: 1.2rem;
-    /* Explicit size */
+    /* Kích thước rõ ràng */
     font-family: var(--font-heading);
-    /* Changed to Acme */
+    /* Đổi thành Acme */
     transition: 0.2s;
     letter-spacing: 0.5px;
 }
@@ -1488,15 +1546,15 @@ h5 {
     z-index: 9999 !important;
     background: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* border-bottom: 3px solid var(--primary-red); Removed as requested */
+    /* border-bottom: 3px solid var(--primary-red); Đã loại bỏ theo yêu cầu */
     padding: 10px 0;
-    /* animation: slideDown 0.3s forwards; Removed to fix disappearing issue */
+    /* animation: slideDown 0.3s forwards; Đã loại bỏ để khắc phục sự cố biến mất */
     transition: none;
-    /* Ensure no transition interferes */
+    /* Đảm bảo không có chuyển tiếp nào can thiệp */
 }
 
 
-/* --- FOOTER REDESIGN --- */
+/* --- THIẾT KẾ LẠI CHÂN TRANG (FOOTER REDESIGN) --- */
 .site-footer {
     background-color: #111;
     color: white;
@@ -1507,11 +1565,11 @@ h5 {
     z-index: 1;
 }
 
-/* SVG Wave Container */
+/* Thùng chứa sóng SVG */
 .footer-wave-svg {
     position: absolute;
     top: -190px;
-    /* Moved higher */
+    /* Chuyển lên cao hơn */
     left: 0;
     width: 100%;
     line-height: 0;
@@ -1523,30 +1581,13 @@ h5 {
     display: block;
     width: 100%;
     height: 200px;
-    /* Fixed height for stability */
+    /* Chiều cao cố định để ổn định */
     min-height: 150px;
 }
 
-/* ... existing code ... */
+/* ... mã hiện có ... */
 
-/* Đây là vị trí của nhân vật Ác Ma */
-/* Đây là vị trí của nhân vật Ác Ma */
-.footer-character {
-    position: absolute;
-    bottom: 50px;
-    /* Đẩy lên trên khung Copyright */
-    left: 2%;
-    z-index: 30;
-    width: 200px !important;
-    /* Giữ nguyên kích thước 200px */
-    pointer-events: none;
-}
 
-.footer-character img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-}
 
 .footer-top {
     display: flex;
@@ -1622,10 +1663,10 @@ h5 {
     z-index: 10;
     padding: 0 150px;
     /* Tăng khoảng cách lề để nội dung bo vào giữa hơn */
-    /* Removed padding-left to center content */
+    /* Đã loại bỏ padding-left để căn giữa nội dung */
 }
 
-/* Align columns to match top row (Left - Center - Right) */
+/* Căn chỉnh các cột khớp với dòng trên cùng (Trái - Giữa - Phải) */
 .footer-info .info-item:nth-child(1) {
     justify-self: start;
 }
@@ -1641,9 +1682,9 @@ h5 {
 .info-item {
     display: flex;
     align-items: center;
-    /* Centered vertically */
+    /* Căn giữa theo chiều dọc */
     gap: 10px;
-    /* Reduced gap */
+    /* Giảm khoảng cách */
 }
 
 .info-icon {
@@ -1672,7 +1713,7 @@ h5 {
 .info-label {
     color: var(--accent-yellow);
     font-size: 14px !important;
-    /* Explicit 14px */
+    /* 14px rõ ràng */
     font-weight: 500;
     margin-bottom: 2px;
 }
@@ -1680,14 +1721,14 @@ h5 {
 .info-val {
     color: #fff;
     font-size: 14px !important;
-    /* Explicit 14px */
+    /* 14px rõ ràng */
     line-height: 1.5;
 }
 
 .footer-copyright {
     text-align: center;
     border-top: 1px solid #222;
-    /* Subtle separation */
+    /* Phân cách tinh tế */
     padding-top: 30px;
     font-size: 0.9rem;
     color: #888;
@@ -1725,14 +1766,7 @@ h5 {
         gap: 30px;
     }
 
-    .footer-character {
-        position: relative;
-        width: 150px;
-        margin: -80px auto 20px;
-        /* Pull up to overlap SVG */
-        bottom: auto;
-        left: auto;
-    }
+
 
     .footer-top {
         flex-direction: column;
@@ -1741,7 +1775,7 @@ h5 {
 
     .footer-wave-svg {
         top: -80px;
-        /* Adjust for mobile */
+        /* Điều chỉnh cho di động */
     }
 
     .site-footer {
@@ -1771,28 +1805,11 @@ h5 {
     max-width: 200px;
 }
 
-/* Character Image */
-.footer-character {
-    position: absolute;
-    left: 2%;
-    bottom: 5px;
-    /* Adjust to sit on copyright bar or just above bottom */
-    z-index: 20;
-    width: 200px;
-    /* Reduced from 250px */
-    pointer-events: none;
-}
 
-.footer-character img {
-    width: 100%;
-    height: auto;
-}
 
-/* Responsive */
+/* Phản hồi (Responsive) */
 @media (max-width: 991px) {
-    .footer-character {
-        display: none;
-    }
+
 
     .footer-top,
     .footer-info {
@@ -1819,11 +1836,11 @@ h5 {
     text-align: center;
     position: relative;
     z-index: 30;
-    /* Ensure it's above character if overlap desired, or below? Character is z-index 20 */
+    /* Đảm bảo nó nằm trên nhân vật nếu muốn chồng lên, hoặc dưới? Nhân vật ở z-index 20 */
 }
 
 .btn-buy-now {
-    /* Reuse styled button but adjust if needed */
+    /* Tái sử dụng nút đã định dạng nhưng điều chỉnh nếu cần */
     padding: 10px 30px;
     font-size: 1rem;
 }
@@ -1838,16 +1855,16 @@ h5 {
     }
 }
 
-/* --- NEWSLETTER --- */
+/* --- BẢN TIN (NEWSLETTER) --- */
 .newsletter {
     padding: 60px 0;
     position: relative;
     color: white;
     z-index: 1;
     margin-top: 180px;
-    /* Space for top scratch */
+    /* Khoảng trống cho vệt xước trên */
     margin-bottom: 150px;
-    /* Space for bottom scratch */
+    /* Khoảng trống cho vệt xước dưới */
 }
 
 .newsletter::before {
@@ -1888,7 +1905,7 @@ h5 {
     margin-bottom: 20px;
     font-family: var(--font-body);
     display: block;
-    /* Ensure block display for margin to work properly */
+    /* Đảm bảo hiển thị dạng khối để lề hoạt động chính xác */
 }
 
 .newsletter h2 {
@@ -1933,7 +1950,7 @@ h5 {
 
 .newsletter .btn-superhero {
     margin-top: 20px;
-    /* Reduced margin for newsletter context */
+    /* Giảm lề cho bối cảnh bản tin */
     margin-bottom: 40px;
 }
 

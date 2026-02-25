@@ -1,10 +1,10 @@
-/* --- NEWSLETTER --- */
+/* --- BẢN TIN (NEWSLETTER) --- */
 .newsletter {
     background-color: #2e2e2e;
-    /* Dark background */
+    /* Nền tối */
     padding: 60px 0;
     position: relative;
-    /* jagged-top handled by existing class or common utility */
+    /* jagged-top được xử lý bởi class hiện có hoặc tiện ích chung */
     color: white;
 }
 
@@ -19,7 +19,7 @@
 .newsletter h2 {
     font-size: 2.5rem;
     color: var(--accent-yellow) !important;
-    /* Ensure yellow */
+    /* Đảm bảo màu vàng */
     margin-bottom: 30px;
     text-transform: capitalize;
 }
@@ -53,12 +53,12 @@
 
 .hero-group img {
     max-width: 80%;
-    /* Adjust as needed */
+    /* Điều chỉnh nếu cần */
     height: auto;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
 .pow-badge {
     display: none;
-    /* Hide if not in reference or reposition */
+    /* Ẩn nếu không có trong bản tham chiếu hoặc thay đổi vị trí */
 }

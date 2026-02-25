@@ -72,10 +72,7 @@ const Footer = () => {
                 </svg>
             </div>
 
-            {/* Character Image */}
-            <div className="footer-character">
-                <img src="images/imgi_65_footer-left-img.png" alt="Demon Character" />
-            </div>
+
 
             <div className="container relative z-10" style={{ position: 'relative', zIndex: 20 }}>
                 {/* Top Section */}
