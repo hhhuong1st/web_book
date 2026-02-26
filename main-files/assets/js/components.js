@@ -13,6 +13,10 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const currentPath = window.location.pathname;
+    const isHome = currentPath.endsWith('index.html') || currentPath.endsWith('/') || currentPath === '' || currentPath.endsWith('web_book/');
+    const isAbout = currentPath.endsWith('about.html');
+
     return (
         <header className={`site-header ${isSticky ? 'sticky' : ''}`}>
             <div className="top-banner">
@@ -33,8 +37,8 @@ const Header = () => {
                 <div className="nav-center">
                     <nav className="nav-menu">
                         <ul>
-                            <li><a href="#" className="text-red">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="index.html" className={isHome ? "text-red" : ""}>Home</a></li>
+                            <li><a href="about.html" className={isAbout ? "text-red" : ""}>About</a></li>
                             <li><a href="#">Comics</a></li>
                             <li><a href="#">Blogs <i className="fa-solid fa-chevron-down"></i></a></li>
                             <li><a href="#">Page <i className="fa-solid fa-chevron-down"></i></a></li>
@@ -47,9 +51,11 @@ const Header = () => {
                 <div className="nav-actions">
                     <button className="btn-login">Login</button>
                     <button className="btn-signup-red">Signup</button>
-                    <button style={{ background: 'none', border: 'none', fontSize: '1.1rem', cursor: 'pointer' }}>
-                        <i className="fa-solid fa-bag-shopping"></i>
-                    </button>
+                    <a href="cart.html" style={{ color: 'inherit' }}>
+                        <button style={{ background: 'none', border: 'none', fontSize: '1.1rem', cursor: 'pointer' }}>
+                            <i className="fa-solid fa-bag-shopping"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </header>
@@ -135,8 +141,15 @@ const Footer = () => {
 };
 
 // --- RENDER ---
-const headerRoot = ReactDOM.createRoot(document.getElementById('root-header'));
-headerRoot.render(<Header />);
+const headerRootElement = document.getElementById('root-header');
+if (headerRootElement) {
+    const headerRoot = ReactDOM.createRoot(headerRootElement);
+    headerRoot.render(<Header />);
+}
 
-const footerRoot = ReactDOM.createRoot(document.getElementById('root-footer'));
-footerRoot.render(<Footer />);
+const footerRootElement = document.getElementById('root-footer');
+if (footerRootElement) {
+    const footerRoot = ReactDOM.createRoot(footerRootElement);
+    footerRoot.render(<Footer />);
+}
+

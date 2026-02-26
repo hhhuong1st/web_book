@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Comic Book Store</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- React & ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root-header"></div>
+
+    <main class="about-page-main">
+        <!-- About Banner -->
+        <section class="about-banner">
+            <div class="container text-center">
+                <h1>About Us</h1>
+                <p>Home > About Us</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="about-story py-80">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-img">
+                        <img src="images/imgi_2_Hero-Background.png" alt="Our Story" class="comic-border">
+                    </div>
+                    <div class="story-content">
+                        <h2 class="text-red">Our Comic Journey</h2>
+                        <p>Welcome to <strong>Comixs.</strong>, your ultimate destination for everything comic books!
+                            Our journey started with a simple passion for storytelling, heroes, and the incredible art
+                            that brings them to life.</p>
+                        <p>We believe that comics are more than just books; they are gateways to unimaginative worlds,
+                            reflections of our society, and sources of endless inspiration for readers of all ages.</p>
+                        <div class="story-features">
+                            <div class="feature-item">
+                                <i class="fa-solid fa-mask text-red"></i>
+                                <span>Curated Collection</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-bolt text-red"></i>
+                                <span>Fast Delivery</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-users text-red"></i>
+                                <span>Fan Community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-mission py-80 bg-cream">
+            <div class="container">
+                <div class="mission-cards">
+                    <div class="mission-card">
+                        <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To provide comic enthusiasts with a premium platform to discover, collect, and celebrate
+                            their favorite stories.</p>
+                    </div>
+                    <div class="mission-card yellow">
+                        <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To become the world's most beloved hub for comic culture, connecting creators and fans
+                            globally.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                        <h3>Our Values</h3>
+                        <p>Integrity, passion, and a never-ending love for the art of comic book storytelling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="root-footer"></div>
+
+    <!-- Components and Main Script -->
+    <script type="text/babel" src="js/components.js"></script>
+</body>
+
+</html>
