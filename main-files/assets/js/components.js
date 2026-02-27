@@ -62,8 +62,7 @@ const Header = () => {
     );
 };
 
-// --- FOOTER COMPONENT ---
-// --- FOOTER COMPONENT ---
+
 // --- FOOTER COMPONENT ---
 const Footer = () => {
     return (
