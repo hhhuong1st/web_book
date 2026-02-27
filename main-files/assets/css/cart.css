@@ -1,4 +1,4 @@
-/* --- CART PAGE STYLES --- */
+/* --- ĐỊNH DẠNG TRANG GIỎ HÀNG --- */
 
 .cart-page-main {
     background-color: var(--bg-cream);
@@ -31,7 +31,7 @@
     align-items: start;
 }
 
-/* Cart Table Styling */
+/* Định dạng Bảng Giỏ hàng */
 .cart-table-wrapper {
     background: white;
     padding: 20px;
@@ -125,7 +125,7 @@
     color: var(--primary-red);
 }
 
-/* Cart Summary Styling */
+/* Định dạng Phần Tổng kết Giỏ hàng */
 .cart-summary {
     background: white;
     padding: 30px;
@@ -185,7 +185,7 @@
     text-decoration: underline;
 }
 
-/* Responsive Cart */
+/* Giỏ hàng Thích ứng (Responsive) */
 @media (max-width: 991px) {
     .cart-grid {
         grid-template-columns: 1fr;

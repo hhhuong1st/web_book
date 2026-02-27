@@ -17,7 +17,7 @@
 
 <body>
 
-    <div id="root"></div>
+    <div id="root-header"></div>
 
     <main>
         <section class="hero-section">
@@ -38,36 +38,7 @@
             <img src="images/khoi.png" class="cloud-img" alt="Clouds">
         </section>
 
-        <section class="features container">
-            <div class="feature-box">
-                <i class="fa-solid fa-book-open text-red"></i>
-                <div>
-                    <h3>Read Books Online</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fa-solid fa-rotate-left text-red"></i>
-                <div>
-                    <h3>30 Days Return</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fa-solid fa-truck-fast text-red"></i>
-                <div>
-                    <h3>Free Shipping</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-            <div class="feature-box">
-                <i class="fa-solid fa-shield-halved text-red"></i>
-                <div>
-                    <h3>Secured Payment</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-        </section>
+        <section class="features container" id="root-features"></section>
 
         <section class="featured-books container section-spacing">
             <div class="section-title text-center">
@@ -77,7 +48,7 @@
             <div class="grid-4 mt-30" id="root-featured-products"></div>
         </section>
 
-        <!-- Shop By Category Section -->
+        <!-- Phần Mua sắm theo Danh mục -->
         <section class="category-section">
             <img src="images/imgi_1_vector-image.png" class="scratch-top" alt="border">
             <div class="bang-sticker">
@@ -90,36 +61,7 @@
                     <h2 class="big-title">Category</h2>
                 </div>
 
-                <div class="cat-grid">
-                    <!-- Manga -->
-                    <div class="cat-card">
-                        <img src="images/imgi_15_Anime0.png" alt="Manga">
-                        <div class="cat-overlay">
-                            <h3>Manga</h3>
-                        </div>
-                    </div>
-                    <!-- Love -->
-                    <div class="cat-card">
-                        <img src="images/imgi_12_Love1.png" alt="Love">
-                        <div class="cat-overlay">
-                            <h3>Love</h3>
-                        </div>
-                    </div>
-                    <!-- Comic -->
-                    <div class="cat-card">
-                        <img src="images/imgi_13_Comic3.png" alt="Comic">
-                        <div class="cat-overlay">
-                            <h3>Comic</h3>
-                        </div>
-                    </div>
-                    <!-- Arrivals -->
-                    <div class="cat-card">
-                        <img src="images/imgi_14_Arrivals4.png" alt="Arrivals">
-                        <div class="cat-overlay">
-                            <h3>Arrivals</h3>
-                        </div>
-                    </div>
-                </div>
+                <div class="cat-grid" id="root-categories"></div>
             </div>
             <img src="images/imgi_2_vector-image.png" class="scratch-bottom" alt="border">
         </section>
@@ -132,12 +74,12 @@
             </div>
 
             <div class="arrivals-grid">
-                <!-- Left: Large Image -->
+                <!-- Trái: Ảnh Lớn -->
                 <div class="arrival-left-img">
                     <img src="images/imgi_20_arrival-img.png" alt="New Arrival Girl">
                 </div>
 
-                <!-- Right: Product Grid -->
+                <!-- Phải: Lưới Sản phẩm -->
                 <div class="arrival-products" id="root-new-arrivals"></div>
             </div>
 
@@ -161,36 +103,7 @@
                     <button>Weekly Best</button>
                     <button>Most Popular</button>
                 </div>
-                <div class="grid-4 mt-30">
-                    <div class="dark-card">
-                        <img src="images/imgi_76_Batman-Wayne-240x300.png" alt="Batman">
-                        <div class="card-body">
-                            <h4>Batman Wayne</h4>
-                            <span>$30.50</span>
-                        </div>
-                    </div>
-                    <div class="dark-card">
-                        <img src="images/imgi_77_Figures-Statues-240x300.png" alt="Goku">
-                        <div class="card-body">
-                            <h4>Figures Statues</h4>
-                            <span>$30.50</span>
-                        </div>
-                    </div>
-                    <div class="dark-card">
-                        <img src="images/imgi_78_Dragon-Ball-Z-240x300.png" alt="Hulk">
-                        <div class="card-body">
-                            <h4>Dragon Ball Z</h4>
-                            <span>$30.50</span>
-                        </div>
-                    </div>
-                    <div class="dark-card">
-                        <img src="images/imgi_79_Ultimate-Spiderman-240x300.png" alt="Spiderman">
-                        <div class="card-body">
-                            <h4>Ultimate Spider</h4>
-                            <span>$30.50</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="grid-4 mt-30" id="root-superhero-series"></div>
                 <div class="text-center mt-30">
                     <button class="btn-superhero">See More Hero</button>
                 </div>
@@ -203,24 +116,7 @@
                 <span class="text-red">Testimonial</span>
                 <h2>Few Word Form Our Community</h2>
             </div>
-            <div class="grid-2">
-                <div class="testi-item">
-                    <div class="bubble">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</div>
-                    <div class="user-info">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
-                        <div><strong>Leslie Alexander</strong><br><small>Creative director, NBC</small></div>
-                    </div>
-                </div>
-                <div class="testi-item">
-                    <div class="bubble">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.</div>
-                    <div class="user-info">
-                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User">
-                        <div><strong>Jacob Jones</strong><br><small>Creative director, NBC</small></div>
-                    </div>
-                </div>
-            </div>
+            <div class="grid-2" id="root-testimonials"></div>
 
             <div class="cta-banner">
                 <img src="images/imgi_38_image.png" class="cta-img" alt="Mascot">
@@ -240,56 +136,7 @@
                 <h2>Our Top Trendy Comic News</h2>
                 <hr>
             </div>
-            <div class="blog-list">
-                <!-- Blog 1 -->
-                <div class="blog-item">
-                    <div class="blog-num">01</div>
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=500" alt="Blog 1">
-                    </div>
-                    <div class="blog-info">
-                        <div class="blog-meta">
-                            <span><i class="fa-regular fa-comment"></i> Comments</span>
-                            <span><i class="fa-solid fa-share"></i> 0 Share</span>
-                        </div>
-                        <h5 class="blog-subtitle">The Art of Comictelling:</h5>
-                        <h3 class="blog-title">How Comics Create<br>Immersive Great Narratives</h3>
-                        <a href="#" class="btn-arrow-circle"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <!-- Blog 2 -->
-                <div class="blog-item">
-                    <div class="blog-num">02</div>
-                    <div class="blog-img">
-                        <img src="https://images.unsplash.com/photo-1535970793482-07de93762dc4?w=500" alt="Blog 2">
-                    </div>
-                    <div class="blog-info">
-                        <div class="blog-meta">
-                            <span><i class="fa-regular fa-comment"></i> Comments</span>
-                            <span><i class="fa-solid fa-share"></i> 0 Share</span>
-                        </div>
-                        <h5 class="blog-subtitle">The Art of Comictelling:</h5>
-                        <h3 class="blog-title">How Comics Create<br>Immersive Great Narratives</h3>
-                        <a href="#" class="btn-arrow-circle"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <!-- Blog 3 -->
-                <div class="blog-item">
-                    <div class="blog-num">03</div>
-                    <div class="blog-img">
-                        <img src="images/imgi_51_How-Comics-Create-Immersive-Great-Narratives1-1.png" alt="Blog 3">
-                    </div>
-                    <div class="blog-info">
-                        <div class="blog-meta">
-                            <span><i class="fa-regular fa-comment"></i> Comments</span>
-                            <span><i class="fa-solid fa-share"></i> 0 Share</span>
-                        </div>
-                        <h5 class="blog-subtitle">The Art of Comictelling:</h5>
-                        <h3 class="blog-title">How Comics Create<br>Immersive Great Narratives</h3>
-                        <a href="#" class="btn-arrow-circle"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            <div class="blog-list" id="root-blogs"></div>
             <div class="text-center" style="margin-top: 60px;"><button class="btn-yellow-outline">Browse More</button>
             </div>
         </section>
@@ -313,26 +160,14 @@
                 <span class="text-red" style="text-transform: uppercase;">Our</span>
                 <h2 style="color: #000;">Brands</h2>
             </div>
-            <div class="grid-4 mt-30">
-                <div class="brand-box">
-                    <img src="images/imgi_58_brand3.png" alt="MAGICBOOK">
-                </div>
-                <div class="brand-box">
-                    <img src="images/imgi_59_brand4.png" alt="RIMBERIO">
-                </div>
-                <div class="brand-box">
-                    <img src="images/imgi_60_brand5.png" alt="BOOK STORY">
-                </div>
-                <div class="brand-box">
-                    <img src="images/imgi_61_brand6.png" alt="Studio Publisher">
-                </div>
-            </div>
+            <div class="grid-4 mt-30" id="root-brands"></div>
         </section>
 
     </main>
 
     <div id="root-footer"></div>
 
+    <script type="text/babel" src="js/cart.js"></script>
     <script type="text/babel" src="js/products.js"></script>
     <script type="text/babel" src="js/components.js"></script>
     <script type="text/babel" src="js/main.js"></script>
