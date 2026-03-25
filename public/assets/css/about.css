@@ -1,0 +1,156 @@
+/* --- ABOUT PAGE STYLES --- */
+
+.about-page-main {
+    background-color: var(--bg-cream);
+}
+
+.about-banner {
+    background: var(--primary-red);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-banner h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.about-banner p {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.py-80 {
+    padding: 80px 0;
+}
+
+.bg-cream {
+    background-color: #f8f4f0;
+}
+
+/* Our Story Section */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-img img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.comic-border {
+    border: 3px solid #000;
+    box-shadow: 10px 10px 0 #000;
+}
+
+.story-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.story-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.story-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-item i {
+    font-size: 24px;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+}
+
+.feature-item span {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Mission Section */
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mission-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0 #000;
+    transition: 0.3s;
+}
+
+.mission-card.yellow {
+    background: var(--accent-yellow);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-red);
+}
+
+.mission-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive About */
+@media (max-width: 991px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-content {
+        text-align: center;
+    }
+
+    .story-features {
+        justify-content: center;
+    }
+
+    .mission-cards {
+        grid-template-columns: 1fr;
+    }
+}

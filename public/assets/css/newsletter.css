@@ -1,0 +1,64 @@
+/* --- BẢN TIN (NEWSLETTER) --- */
+.newsletter {
+    background-color: #2e2e2e;
+    /* Nền tối */
+    padding: 60px 0;
+    position: relative;
+    /* jagged-top được xử lý bởi class hiện có hoặc tiện ích chung */
+    color: white;
+}
+
+.newsletter-sub {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: var(--font-body);
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    color: var(--accent-yellow) !important;
+    /* Đảm bảo màu vàng */
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.btn-red {
+    background: var(--primary-red);
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    box-shadow: 4px 4px 0 white;
+    border-radius: 4px;
+    transition: 0.2s;
+    margin-bottom: 40px;
+}
+
+.btn-red:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 white;
+    background: #b00015;
+}
+
+.hero-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-group img {
+    max-width: 80%;
+    /* Điều chỉnh nếu cần */
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.pow-badge {
+    display: none;
+    /* Ẩn nếu không có trong bản tham chiếu hoặc thay đổi vị trí */
+}
