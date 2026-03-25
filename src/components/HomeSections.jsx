@@ -1,83 +1,80 @@
 import React from 'react';
 
-export const FeaturesSection = () => {
-    const features = [
-        { icon: "/assets/images/imgi_5_image.png", title: "Free Shipping", text: "Long established fact that a reader will be distracted." },
-        { icon: "/assets/images/imgi_6_image.png", title: "Free Returns", text: "Long established fact that a reader will be distracted." },
-        { icon: "/assets/images/imgi_5_image.png", title: "Secure Payment", text: "Long established fact that a reader will be distracted." },
-        { icon: "/assets/images/imgi_6_image.png", title: "24/7 Support", text: "Long established fact that a reader will be distracted." },
-    ];
-    return (
-        <div className="grid-4" style={{ backgroundColor: '#fff', borderRadius: '15px' }}>
-            {features.map((f, i) => (
-                <div key={i} className="feature-item">
-                    <img src={f.icon} alt={f.title} />
-                    <div className="feat-text">
-                        <h3>{f.title}</h3>
-                        <p>{f.text}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
-};
+// --- MẢNG DỮ LIỆU GỐC ---
+const featuresData = [
+    { id: 1, icon: "fa-solid fa-book-open text-red", title: "Read Books Online", desc: "Lorem ipsum dolor sit amet." },
+    { id: 2, icon: "fa-solid fa-rotate-left text-red", title: "30 Days Return", desc: "Lorem ipsum dolor sit amet." },
+    { id: 3, icon: "fa-solid fa-truck-fast text-red", title: "Free Shipping", desc: "Lorem ipsum dolor sit amet." },
+    { id: 4, icon: "fa-solid fa-shield-halved text-red", title: "Secured Payment", desc: "Lorem ipsum dolor sit amet." }
+];
 
-export const CategoriesSection = () => {
-    const categories = [
-        { name: "Superhero", count: "112", icon: "/assets/images/imgi_2_category-image.png" },
-        { name: "Action", count: "90", icon: "/assets/images/imgi_3_category-image.png" },
-        { name: "Sci-Fi", count: "150", icon: "/assets/images/imgi_2_category-image.png" },
-        { name: "Adventure", count: "80", icon: "/assets/images/imgi_3_category-image.png" },
-    ];
-    return (
-        <>
-            {categories.map((c, i) => (
-                <div key={i} className="cat-item">
-                    <div className="cat-icon-circle"><img src={c.icon} alt={c.name} /></div>
-                    <h3>{c.name}</h3>
-                    <p>{c.count} Plus Books</p>
-                </div>
-            ))}
-        </>
-    );
-};
+const categoriesData = [
+    { id: 1, image: "/assets/images/imgi_15_Anime0.png", title: "Manga" },
+    { id: 2, image: "/assets/images/imgi_12_Love1.png", title: "Love" },
+    { id: 3, image: "/assets/images/imgi_13_Comic3.png", title: "Comic" },
+    { id: 4, image: "/assets/images/imgi_14_Arrivals4.png", title: "Arrivals" }
+];
 
-export const TestimonialsSection = () => {
-    const testimonials = [
-        { avatar: "/assets/images/imgi_46_community-member1.png", name: "David James", title: "CEO Admin", rating: "5.0", text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." },
-        { avatar: "/assets/images/imgi_47_community-member2.png", name: "Marry Jane", title: "Marketing", rating: "4.9", text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." },
-    ];
-    return (
-        <>
-            {testimonials.map((t, i) => (
-                <div key={i} className="test-item">
-                    <div className="test-header">
-                        <img src={t.avatar} className="avatar" alt={t.name} />
-                        <div className="test-meta">
-                            <h4>{t.name}</h4>
-                            <span>{t.title}</span>
-                            <div className="rating"><i className="fa-solid fa-star"></i> {t.rating}</div>
-                        </div>
-                    </div>
-                    <p className="test-text">"{t.text}"</p>
-                </div>
-            ))}
-        </>
-    );
-};
+const testimonialsData = [
+    { id: 1, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", userImg: "https://randomuser.me/api/portraits/men/32.jpg", name: "Leslie Alexander", role: "Creative director, NBC" },
+    { id: 2, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", userImg: "https://randomuser.me/api/portraits/men/45.jpg", name: "Jacob Jones", role: "Creative director, NBC" }
+];
 
-export const BrandsSection = () => {
-    const brands = [
-        "/assets/images/imgi_52_image.png",
-        "/assets/images/imgi_53_image.png",
-        "/assets/images/imgi_54_image.png",
-        "/assets/images/imgi_55_image.png",
-    ];
-    return (
-        <>
-            {brands.map((b, i) => (
-                <div key={i} className="brand-logo"><img src={b} alt={`Brand ${i}`} /></div>
-            ))}
-        </>
-    );
-};
+const brandsData = [
+    { id: 1, image: "/assets/images/imgi_58_brand3.png", alt: "MAGICBOOK" },
+    { id: 2, image: "/assets/images/imgi_59_brand4.png", alt: "RIMBERIO" },
+    { id: 3, image: "/assets/images/imgi_60_brand5.png", alt: "BOOK STORY" },
+    { id: 4, image: "/assets/images/imgi_61_brand6.png", alt: "Studio Publisher" }
+];
+
+// --- CÁC COMPONENT GỐC ---
+export const FeaturesSection = () => (
+    <>
+        {featuresData.map(f => (
+            <div className="feature-box" key={f.id}>
+                <i className={f.icon}></i>
+                <div>
+                    <h3>{f.title}</h3>
+                    <p>{f.desc}</p>
+                </div>
+            </div>
+        ))}
+    </>
+);
+
+export const CategoriesSection = () => (
+    <>
+        {categoriesData.map(cat => (
+            <div className="cat-card" key={cat.id}>
+                <img src={cat.image} alt={cat.title} />
+                <div className="cat-overlay">
+                    <h3>{cat.title}</h3>
+                </div>
+            </div>
+        ))}
+    </>
+);
+
+export const TestimonialsSection = () => (
+    <>
+        {testimonialsData.map(t => (
+            <div className="testi-item" key={t.id}>
+                <div className="bubble">{t.text}</div>
+                <div className="user-info">
+                    <img src={t.userImg} alt={t.name} />
+                    <div><strong>{t.name}</strong><br /><small>{t.role}</small></div>
+                </div>
+            </div>
+        ))}
+    </>
+);
+
+export const BrandsSection = () => (
+    <>
+        {brandsData.map(b => (
+            <div className="brand-box" key={b.id}>
+                <img src={b.image} alt={b.alt} />
+            </div>
+        ))}
+    </>
+);

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
+    const [cartCount, setCartCount] = useState(0);
     const location = useLocation();
-    const cartItems = useSelector(state => state.cart.items);
-    const cartCount = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
+
+    const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        setCartCount(count);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,7 +18,14 @@ const Header = () => {
             else setIsSticky(false);
         };
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        updateCartCount();
+        window.addEventListener('cartUpdated', updateCartCount);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('cartUpdated', updateCartCount);
+        };
     }, []);
 
     const currentPath = location.pathname;
@@ -32,10 +43,12 @@ const Header = () => {
                     <button className="btn-banner">Buy Bundle(100+ Themes)</button>
                 </div>
             </div>
+
             <div className="container header-inner">
                 <div className="logo">
                     <img src="/assets/images/imgi_1_logo.png" style={{ height: '100px' }} alt="Logo" />
                 </div>
+
                 <div className="nav-center">
                     <nav className="nav-menu">
                         <ul>
@@ -49,6 +62,7 @@ const Header = () => {
                     </nav>
                     <button className="btn-buy-now">Buy Now</button>
                 </div>
+
                 <div className="nav-actions">
                     <button className="btn-login">Login</button>
                     <button className="btn-signup-red">Signup</button>
