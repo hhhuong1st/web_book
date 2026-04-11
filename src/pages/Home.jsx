@@ -17,10 +17,10 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="hero-image">
-                        <img src="/assets/images/cacanhhung.png" alt="Heroes" />
+                        <img src="/src/assets/images/cacanhhung.png" alt="Heroes" />
                     </div>
                 </div>
-                <img src="/assets/images/khoi.png" className="cloud-img" alt="Clouds" />
+                <img src="/src/assets/images/khoi.png" className="cloud-img" alt="Clouds" />
             </section>
 
             <section className="features container" id="root-features">
@@ -38,9 +38,9 @@ const Home = () => {
             </section>
 
             <section className="category-section">
-                <img src="/assets/images/imgi_1_vector-image.png" className="scratch-top" alt="border" />
+                <img src="/src/assets/images/imgi_1_vector-image.png" className="scratch-top" alt="border" />
                 <div className="bang-sticker">
-                    <img src="/assets/images/imgi_19_image.png" alt="BANG!" />
+                    <img src="/src/assets/images/imgi_19_image.png" alt="BANG!" />
                 </div>
 
                 <div className="container text-center relative z-10">
@@ -53,18 +53,18 @@ const Home = () => {
                         <CategoriesSection />
                     </div>
                 </div>
-                <img src="/assets/images/imgi_2_vector-image.png" className="scratch-bottom" alt="border" />
+                <img src="/src/assets/images/imgi_2_vector-image.png" className="scratch-bottom" alt="border" />
             </section>
 
             <section className="arrivals container section-spacing">
                 <div className="section-title text-center mb-40">
-                    <span className="text-red small-title" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem' }}>New</span>
-                    <h2 className="big-title" style={{ color: '#000' }}>Arrivals</h2>
+                    <span className="text-red small-title section-subtitle-large">New</span>
+                    <h2 className="big-title section-title-dark">Arrivals</h2>
                 </div>
 
                 <div className="arrivals-grid">
                     <div className="arrival-left-img">
-                        <img src="/assets/images/imgi_20_arrival-img.png" alt="New Arrival Girl" />
+                        <img src="/src/assets/images/imgi_20_arrival-img.png" alt="New Arrival Girl" />
                     </div>
 
                     <div className="arrival-products" id="root-new-arrivals">
@@ -78,9 +78,9 @@ const Home = () => {
             </section>
 
             <section className="dark-series section-spacing">
-                <img src="/assets/images/imgi_32_top-img.png" className="wow-sticker" alt="WOW!" />
-                <img src="/assets/images/imgi_33_bottom-img.png" className="girl-sticker" alt="Girl with Megaphone" />
-                <img src="/assets/images/imgi_3_vector-image.png" className="scratch-top" alt="border" />
+                <img src="/src/assets/images/imgi_32_top-img.png" className="wow-sticker" alt="WOW!" />
+                <img src="/src/assets/images/imgi_33_bottom-img.png" className="girl-sticker" alt="Girl with Megaphone" />
+                <img src="/src/assets/images/imgi_3_vector-image.png" className="scratch-top" alt="border" />
                 <div className="container relative z-10">
                     <div className="section-title text-center text-white">
                         <span>New</span>
@@ -98,7 +98,7 @@ const Home = () => {
                         <button className="btn-superhero">See More Hero</button>
                     </div>
                 </div>
-                <img src="/assets/images/imgi_4_vector-image.png" className="scratch-bottom" alt="border" />
+                <img src="/src/assets/images/imgi_4_vector-image.png" className="scratch-bottom" alt="border" />
             </section>
 
             <section className="testimonials container section-spacing">
@@ -111,7 +111,7 @@ const Home = () => {
                 </div>
 
                 <div className="cta-banner">
-                    <img src="/assets/images/imgi_38_image.png" className="cta-img" alt="Mascot" />
+                    <img src="/src/assets/images/imgi_38_image.png" className="cta-img" alt="Mascot" />
                     <div className="cta-content text-center">
                         <h2>Want to readers and listeners see Your digital comics? Join this team!</h2>
                         <p className="text-white">We Strongly Believe That our team support & Drive You.</p>
@@ -129,29 +129,29 @@ const Home = () => {
                 <div className="blog-list" id="root-blogs">
                     <BlogsSection />
                 </div>
-                <div className="text-center" style={{ marginTop: '60px' }}>
+                <div className="text-center mt-60">
                     <button className="btn-yellow-outline">Browse More</button>
                 </div>
             </section>
 
             <section className="newsletter">
-                <img src="/assets/images/imgi_3_vector-image.png" className="scratch-top" alt="border" />
+                <img src="/src/assets/images/imgi_3_vector-image.png" className="scratch-top" alt="border" />
                 <div className="container text-center relative z-10">
                     <p className="newsletter-sub">You may unsubscribe at any moment</p>
                     <h2 className="text-yellow">Get your Need on By Subscribing our Newsletter</h2>
                     <button className="btn-superhero">See All Post</button>
                     <div className="hero-group">
-                        <img src="/assets/images/imgi_52_bg-bottom-img.png" alt="Justice League" />
+                        <img src="/src/assets/images/imgi_52_bg-bottom-img.png" alt="Justice League" />
                     </div>
                     <div className="pow-badge">POW!</div>
                 </div>
-                <img src="/assets/images/imgi_4_vector-image.png" className="scratch-bottom" alt="border" />
+                <img src="/src/assets/images/imgi_4_vector-image.png" className="scratch-bottom" alt="border" />
             </section>
 
             <section className="brands container section-spacing text-center">
                 <div className="section-title text-center">
-                    <span className="text-red" style={{ textTransform: 'uppercase' }}>Our</span>
-                    <h2 style={{ color: '#000' }}>Brands</h2>
+                    <span className="text-red text-uppercase">Our</span>
+                    <h2 className="section-title-dark">Brands</h2>
                 </div>
                 <div className="grid-4 mt-30" id="root-brands">
                     <BrandsSection />

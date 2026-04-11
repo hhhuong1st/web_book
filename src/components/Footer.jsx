@@ -11,7 +11,7 @@ const Footer = () => {
                 </svg>
             </div>
 
-            <div className="container relative z-10" style={{ position: 'relative', zIndex: 20 }}>
+            <div className="container footer-container-inner">
                 {/* Phần trên cùng */}
                 <div className="footer-top">
                     <div className="footer-logo">Comixs.</div>

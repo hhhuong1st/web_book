@@ -1600,6 +1600,55 @@ h5 {
     /* Tăng khoảng cách lề để nội dung bo vào giữa hơn */
 }
 
+/* Custom Header & Footer classes to replace inline styles */
+.logo-img {
+    height: 100px;
+}
+
+.btn-cart-bag {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    color: inherit;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.footer-container-inner {
+    position: relative;
+    z-index: 20;
+}
+
+/* Home Page Utilities */
+.section-subtitle-large {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+}
+
+.section-title-dark {
+    color: #000;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .footer-logo {
     font-family: var(--font-heading);
     font-size: 3rem;

@@ -46,7 +46,7 @@ const Header = () => {
 
             <div className="container header-inner">
                 <div className="logo">
-                    <img src="/assets/images/imgi_1_logo.png" style={{ height: '100px' }} alt="Logo" />
+                    <img src="/src/assets/images/imgi_1_logo.png" className="logo-img" alt="Logo" />
                 </div>
 
                 <div className="nav-center">
@@ -67,13 +67,10 @@ const Header = () => {
                     <button className="btn-login">Login</button>
                     <button className="btn-signup-red">Signup</button>
                     <Link to="/cart" style={{ color: 'inherit' }}>
-                        <button style={{ background: 'none', border: 'none', fontSize: '1.1rem', cursor: 'pointer', position: 'relative' }}>
+                        <button className="btn-cart-bag">
                             <i className="fa-solid fa-bag-shopping"></i>
                             {cartCount > 0 && (
-                                <span style={{
-                                    position: 'absolute', top: '-8px', right: '-10px', background: 'red', color: 'white',
-                                    fontSize: '10px', fontWeight: 'bold', padding: '2px 6px', borderRadius: '50%'
-                                }}>{cartCount}</span>
+                                <span className="cart-badge">{cartCount}</span>
                             )}
                         </button>
                     </Link>

@@ -9,10 +9,10 @@ const featuresData = [
 ];
 
 const categoriesData = [
-    { id: 1, image: "/assets/images/imgi_15_Anime0.png", title: "Manga" },
-    { id: 2, image: "/assets/images/imgi_12_Love1.png", title: "Love" },
-    { id: 3, image: "/assets/images/imgi_13_Comic3.png", title: "Comic" },
-    { id: 4, image: "/assets/images/imgi_14_Arrivals4.png", title: "Arrivals" }
+    { id: 1, image: "/src/assets/images/imgi_15_Anime0.png", title: "Manga" },
+    { id: 2, image: "/src/assets/images/imgi_12_Love1.png", title: "Love" },
+    { id: 3, image: "/src/assets/images/imgi_13_Comic3.png", title: "Comic" },
+    { id: 4, image: "/src/assets/images/imgi_14_Arrivals4.png", title: "Arrivals" }
 ];
 
 const testimonialsData = [
@@ -21,10 +21,10 @@ const testimonialsData = [
 ];
 
 const brandsData = [
-    { id: 1, image: "/assets/images/imgi_58_brand3.png", alt: "MAGICBOOK" },
-    { id: 2, image: "/assets/images/imgi_59_brand4.png", alt: "RIMBERIO" },
-    { id: 3, image: "/assets/images/imgi_60_brand5.png", alt: "BOOK STORY" },
-    { id: 4, image: "/assets/images/imgi_61_brand6.png", alt: "Studio Publisher" }
+    { id: 1, image: "/src/assets/images/imgi_58_brand3.png", alt: "MAGICBOOK" },
+    { id: 2, image: "/src/assets/images/imgi_59_brand4.png", alt: "RIMBERIO" },
+    { id: 3, image: "/src/assets/images/imgi_60_brand5.png", alt: "BOOK STORY" },
+    { id: 4, image: "/src/assets/images/imgi_61_brand6.png", alt: "Studio Publisher" }
 ];
 
 // --- CÁC COMPONENT GỐC ---
