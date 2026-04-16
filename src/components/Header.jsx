@@ -66,7 +66,7 @@ const Header = () => {
                 <div className="nav-actions">
                     <button className="btn-login">Login</button>
                     <button className="btn-signup-red">Signup</button>
-                    <Link to="/cart" style={{ color: 'inherit' }}>
+                    <Link to="/cart">
                         <button className="btn-cart-bag">
                             <i className="fa-solid fa-bag-shopping"></i>
                             {cartCount > 0 && (
